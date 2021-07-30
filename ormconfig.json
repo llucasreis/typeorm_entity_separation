@@ -1,0 +1,17 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "postgres",
+  "password": "p0stgr3s",
+  "database": "gamestore",
+  "entities": [
+    "./src/infra/typeorm/entities/*.ts"
+  ],
+  "migrations": [
+    "./src/infra/typeorm/migrations/*.ts"
+  ],
+  "migrationsDir": [
+    "./src/infra/typeorm/migrations"
+  ]
+}

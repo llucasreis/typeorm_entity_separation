@@ -1,7 +1,11 @@
+import { createConnection } from 'typeorm';
+
 import envConfig from './config/env';
 
-import app from './config/app';
+createConnection().then(async () => {
+  const app = (await import('./config/app')).default;
 
-app.listen(envConfig.port, () => {
-  console.log("Listening");
+  app.listen(envConfig.port, () => {
+    console.log("Server and database connected.");
+  })
 });
