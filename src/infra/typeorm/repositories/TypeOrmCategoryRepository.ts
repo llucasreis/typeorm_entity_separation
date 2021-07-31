@@ -11,11 +11,14 @@ export default class TypeOrmCategoryRepository implements CategoryRepository {
   }
 
   public async create(data: CategoryData): Promise<Category> {
-    console.log(data);
     const newCategory = await this.ormRepository.save(data);
 
-    console.log(newCategory);
-
     return newCategory;
+  }
+
+  public async findByName(name: string): Promise<Category | undefined> {
+    const category = await this.ormRepository.findOne({ where: { name }});
+
+    return category;
   }
 }
