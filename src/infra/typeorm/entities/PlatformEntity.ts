@@ -1,9 +1,9 @@
-import { CategoryData } from "@domain/entities/Category";
+import { PlatformData } from "@domain/entities/Platform";
 import { EntitySchema } from "typeorm";
 import BaseEntity from "./BaseEntity";
 
-const CategoryEntity = new EntitySchema<CategoryData>({
-  name: "categories",
+const PlatformEntity = new EntitySchema<PlatformData>({
+  name: "platforms",
   columns: {
     ...BaseEntity,
     name: {
@@ -13,4 +13,4 @@ const CategoryEntity = new EntitySchema<CategoryData>({
   }
 });
 
-export default CategoryEntity;
+export default PlatformEntity;

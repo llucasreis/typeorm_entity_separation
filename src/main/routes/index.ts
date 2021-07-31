@@ -1,8 +1,8 @@
-import categoryRouter from "@presentation/routes/CategoryRoutes";
+import platformRouter from "@presentation/routes/PlatformRoutes";
 import { Router } from "express";
 
 const router = Router();
 
-router.use('/category', categoryRouter);
+router.use('/platform', platformRouter);
 
 export default router;
