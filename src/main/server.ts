@@ -1,6 +1,6 @@
 import { createConnection } from 'typeorm';
 
-import envConfig from './config/env';
+import envConfig from '@main/config/env';
 
 createConnection().then(async () => {
   const app = (await import('./config/app')).default;
